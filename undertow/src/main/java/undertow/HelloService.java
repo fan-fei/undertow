@@ -1,16 +1,15 @@
 package undertow;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class HelloService {
 
-    final static Logger logger = LoggerFactory.getLogger(HelloService.class);
-
     public String hello() {
-        logger.info("test message...........");
+        log.info("{} my message", "param");
         return "hello";
     }
 }
