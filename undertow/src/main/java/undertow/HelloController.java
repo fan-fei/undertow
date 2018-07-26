@@ -1,5 +1,7 @@
 package undertow;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +13,7 @@ public class HelloController {
     HelloService helloService;
 
     @RequestMapping("/hello")
-    public String hello() {
+    public List<Hello> hello() {
         return helloService.hello();
     }
 
